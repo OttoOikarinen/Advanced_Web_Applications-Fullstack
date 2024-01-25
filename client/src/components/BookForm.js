@@ -50,7 +50,7 @@ const BookForm = () => {
           required
         />
       </label>
-
+      <br/>
       <label>
         Author:
         <input
@@ -62,7 +62,7 @@ const BookForm = () => {
           required
         />
       </label>
-
+      <br/>
       <label>
         Pages:
         <input
@@ -74,7 +74,7 @@ const BookForm = () => {
           required
         />
       </label>
-
+      <br/>
       <input type="submit" id='submit' value="Submit" />
     </form>
   );
