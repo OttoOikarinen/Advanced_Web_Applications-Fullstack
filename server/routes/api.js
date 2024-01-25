@@ -14,21 +14,30 @@ router.post('/book', async (req, res) => {
 
         const existingBook = await Books.findOne({name});
         if (existingBook) {
-        return res.status(400).json({error: "Book already in database."});
+            console.log("Book already in db.")
+            return res.status(400).json({error: "Book already in database."});
         }
 
+        console.log("Didn't find book in db, so proceeding.")
         const newBook = new Books({
             name: name,
             author: author,
             pages: pages,
         })
+
+        console.log(newBook)
     
-        await newBook.save();
+        await newBook.save()
+        console.log('Book saved.')
         return res.send("ok");
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
+router.get('/books', (req, res) => {
+    let books;
+})
 
 module.exports = router;
