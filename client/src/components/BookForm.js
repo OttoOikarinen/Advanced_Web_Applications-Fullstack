@@ -19,7 +19,7 @@ const BookForm = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('/api/book/', {
+      const response = await fetch('/api/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
