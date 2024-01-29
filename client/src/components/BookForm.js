@@ -39,8 +39,7 @@ const BookForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Book Name:
+        <label for='name'>Book Name:</label>
         <input
           type="string"
           name="name"
@@ -49,10 +48,8 @@ const BookForm = () => {
           onChange={handleInputChange}
           required
         />
-      </label>
-      <br/>
-      <label>
-        Author:
+        <br/>
+        <label for='author'>Author:</label>
         <input
           type="string"
           name="author"
@@ -61,10 +58,9 @@ const BookForm = () => {
           onChange={handleInputChange}
           required
         />
-      </label>
-      <br/>
-      <label>
-        Pages:
+      
+        <br/>
+        <label for='pages'>Pages:</label>
         <input
           type="number"
           name="pages"
@@ -72,10 +68,9 @@ const BookForm = () => {
           value={bookInfo.pages}
           onChange={handleInputChange}
           required
-        />
-      </label>
-      <br/>
-      <input type="submit" id='submit' value="Submit" />
+         />
+        <br/>
+        <input type="submit" id='submit' value="Submit" />
     </form>
   );
 };
